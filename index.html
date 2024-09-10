@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝐏𝐍𝐋𝐀_𝐔𝐀𝐕</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head><style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+section {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-container, .pilot-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery-item, .pilot-profile {
+    text-align: center;
+    max-width: 300px;
+}
+
+.gallery-item img, .pilot-profile img, .gallery-item video {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+</style>
+<body>
+    <header>
+        <h1>𝐏𝐍𝐋𝐀_𝐔𝐀𝐕</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>𝐏𝐍𝐋𝐀 𝐔𝐀𝐕မှ နွေးထွေးစွာ ကြိုဆိုပါတယ်</h2>
+        <p></p>
+    </section>
+
+    <section id="purpose">
+        <h2>ရည်မှန်းချက်နှင့် ရည်ရွယ်ချက်</h2>
+        <p>"ငါတို့၏ ရည်မှန်းချက်မှာ ခေတ်မီဒရုန်းနည်းပညာများ အသုံးပြုခြင်းဖြင့် ငါတို့၏ ဇာတိမြေကို ကာကွယ်စောင့်ရှောက်ရန်နှင့် ငါတို့၏ပြည်သူများ၏ လုံခြုံရေး၊ သာယာဝပြောရေးနှင့် ကျန်းမာချမ်းသာရေးကို အာမခံပါသည်။"</p>
+    </section>
+<section id="Cooperation">
+        <h2>စည်းလုံးညီညွတ်မှုနှင့် ပူးပေါင်းဆောင်ရွက်မှု</h2>
+<p>“ဒို့မြေကို ကာကွယ်စောင့်ရှောက်ဖို့နဲ့ ပအိုဝ်းပြည်သူအားလုံး စည်းလုံးညီညွတ်မှုကို ဖော်ဆောင်ဖို့ လက်တွဲကြိုးပမ်းပါ”</p>
+<section id="support and encouragement">
+        <h2>ထောက်ပံ့အားပေးပါ</h2>
+<p>"ကျွန်တော်တို့ ဒီခရီးကို ဆက်သွားနေချိန်မှာ သင်ရဲ့ ပံ့ပိုးမှုနဲ့ အားပေးမှုက ငါတို့အတွက် အဖိုးမဖြတ်ပါဘူး။"</p>
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="images/HTR1.jpg" alt="UAV Photo 1">
+                <p>Drone in Action</p>
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="videos/uav_demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Flight Demonstration</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pilots">
+        <h2>Meet Our Pilots</h2>
+        <div class="pilot-container">
+            <div class="pilot-profile">
+                <h3>Htar Rack</h3>
+                <p>Lead Pilot with expertise in UAV operation and mission planning.</p>
+            </div>
+            <div class="pilot-profile">
+                <h3>.....</h3>
+                <p>Drone maintenance expert and trainer for new pilots.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 PNLA UAV . All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+  </html>
+      
