@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Puzzle Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        input { margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Math Puzzle Game</h1>
+    <p>Enter your puzzle expression:</p>
+    <input type="text" id="expression" placeholder="e.g., C + D + 4 + E">
+    <button onclick="calculateResult()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        // Mapping letters to numbers
+        const mapping = {
+            'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5,
+            'F': 6, 'G': 7, 'H': 8, 'I': 9, 'J': 0
+        };
+
+        function calculateResult() {
+            const expression = document.getElementById('expression').value.toUpperCase();
+            const result = evalExpression(expression);
+            document.getElementById('result').innerText = "Result: " + result;
+        }
+
+        function evalExpression(expr) {
+            let modifiedExpr = expr.split('').map(char => {
+                return mapping[char] !== undefined ? mapping[char] : char;
+            }).join('');
+            try {
+                // Evaluate the expression
+                let result = eval(modifiedExpr);
+                return convertToLetters(result);
+            } catch (e) {
+                return 'Invalid Expression';
+            }
+        }
+
+        function convertToLetters(num) {
+            if (num < 0 || num > 9) return num; // Handle numbers outside A-J range
+            return Object.keys(mapping).find(key => mapping[key] === num);
+        }
+    </script>
+</body>
+</html>
